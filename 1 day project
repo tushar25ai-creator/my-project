@@ -1,0 +1,288 @@
+Question 1
+What is a variable in C/C++?
+
+Answer:
+ A variable is a named location in computer memory that stores a value, and that value can change while the program runs. Every variable has three parts: a data type (what kind of value it can hold), a name/identifier (how the programmer refers to it), and a value (what is currently stored).
+
+ Question 2
+Why do we use variables in programs?
+
+Answer: Variables let a program store, change, and reuse data while it executes, instead of working only with fixed values written directly into the code.
+Question 3
+What is the difference between a variable name and its value?
+
+Answer: The name (identifier) is the label used in the source code to refer to a memory location, for example age. The value is the actual data currently stored at that location, for example 18. The name is fixed once declared; the value can change many times during execution.
+Question 4
+Which of the following is a valid variable name? a) 2num  b) total_marks  c) for  d) my marks
+Answer: (b) total_marks 
+Question 5
+Why is Age different from age?
+Answer: C is case-sensitive, so Age and age are treated as two completely different, independent variables, even though a human reader sees them as 'the same word'.
+Question 6
+Can a variable name contain spaces? Why?
+Answer: No. A space is not allowed anywhere inside a C identifier
+Question 7
+Can a variable name start with an underscore (_)?
+Answer: Yes, syntactically it is allowed. _count is a valid identifier as far as the grammar is concerned.
+Question 8
+What happens if two variables have the same name in the same scope?
+Answer: The compiler raises a redeclaration error - C does not allow two variables with identical names to exist in the same scope at the same time.
+Question 9
+Write three meaningful variable names for storing student information.
+Answer: studentId, studentName, studentMarks
+Question 10
+Which naming convention is better and why: studentMarks or sm?
+Answer: studentMarks is the better choice.
+Question 11
+What is a data type?
+Answer: A data type is a classification that tells the compiler what kind of value a variable can store (whole number, decimal number, character, and so on), and therefore how many bytes of memory to reserve and which operations are valid on it.
+Question 12
+Which data type is used to store whole numbers?
+Answer: int (and its variants short int, long int, long long int for different ranges).
+Question 13
+Which data type is used to store decimal values?
+Answer: float or double.
+Question 14
+What is the difference between float and double?
+Answer: float occupies 4 bytes and gives about 6-7 significant decimal digits of precision. double occupies 8 bytes and gives about 15-16 significant decimal digits - roughly double the precision, at double the memory cost.
+Question 15
+Which data type stores a single character?
+Answer: char.
+Question 16
+Which data type stores True/False values?
+Answer: In C99 and later, _Bool (or, more readably, bool after #include <stdbool.h>, where true/false are defined as 1/0). In C++, bool is a native built-in type.
+Question 17
+What data type is suitable for storing a person's name?
+Answer: A character array (string) - for example char name[50];. C++ also offers std::string, but standard C represents text only as a null-terminated array of char.
+Question 18
+Predict the output: int age=18; cout<<age;
+Answer: Output: 18
+Question 19
+Identify the data type: 25, 3.14, 'A', true.
+Answer: 25 -> int   |   3.14 -> double   |   'A' -> char   |   true -> bool (C++; in plain C, with stdbool.h, also bool)
+Question 20
+What happens if you store a decimal number in an int variable?
+Answer: The fractional part is truncated - simply cut off, not rounded - leaving only the whole-number portion. int x = 7.9; stores 7, not 8.
+Question 21
+What is the purpose of cin?
+Answer: cin ("character input") is the C++ standard input stream object; it reads values typed by the user at the keyboard into program variables.
+Question 22
+What is the purpose of cout?
+Answer: cout ("character output") is the C++ stream used to display data on the console screen.
+Question 23
+Which symbol is used with cin?
+Answer: >>  -  the stream extraction operator.
+Question 24
+Which symbol is used with cout?
+Answer: <<  -  the stream insertion operator.
+Question 25
+Explain: cin >> age;
+Answer: This statement pauses the program, waits for the user to type a value, converts the typed characters into the data type of age, and stores the result in age.
+Question 26
+Explain: cout << age;
+Answer: This statement sends the current value stored in age out to the console as text.
+Question 27
+What is the purpose of endl?
+Answer: endl (C++) inserts a newline character into the output and flushes the output buffer, moving the cursor to the start of the next line.
+Question 28
+Write a statement to input a student's marks.
+Answer: int marks; scanf("%d", &marks);
+Question 29
+Write a statement to display 'Welcome to C++'.
+Answer: printf("Welcome to C++");
+Question 30
+Predict the output: cout << 'Programming';
+Answer: This does NOT print the word 'Programming' as readable text. Because single quotes were used instead of double quotes, the compiler treats 'Programming' as a multi-character constant (an implementation-defined integer built from the characters' codes), not a string. Most compilers issue a warning, and the value sent to the stream is that integer, not the text 'Programming'.
+Question 31
+What is an operator?
+Answer: An operator is a symbol that instructs the compiler to perform a specific action - arithmetic, relational, or logical - on one or more values, called operands (for example +, -, ==, &&).
+Question 32
+Which operator is used for addition?
+Answer: +  (the plus / arithmetic addition operator).
+Question 33
+What is the result of 10 % 3?
+Answer: 1
+Question 34
+What is the result of 8 % 2?
+Answer: 0
+Question 35
+Which operator checks equality?
+Answer: ==  (the double-equals relational operator).
+Question 36
+What is the difference between = and == ?
+Answer: = is the assignment operator: it stores the value on the right into the variable on the left (a = 5; puts 5 into a). == is the equality comparison operator: it checks whether two values are currently equal and produces a true/false (1/0) result without changing anything (a == 5 asks 'does a currently equal 5?').
+Question 37
+What is the result of 5 > 3?
+Answer: true, represented as the integer 1 in C. (C has no separate bool literal unless stdbool.h is included; relational expressions simply evaluate to 1 or 0.)
+Question 38
+What does && represent?
+Answer: Logical AND. The expression a && b is true only when both a and b are true (non-zero); if either one is false, the whole expression is false.
+Question 39
+What does || represent?
+Answer: Logical OR. The expression a || b is true if at least one of a or b is true; it is false only when both are false.
+Question 40
+What does ! represent?
+Answer: Logical NOT. It reverses a boolean value: !true becomes false, and !false becomes true.
+Question 41
+Write a program to print 'Hello World'.
+Algorithm / Steps:
+1.	Include the standard I/O header (stdio.h) so printf is available.
+2.	Begin the main() function - the program's entry point.
+3.	Call printf to display the literal text "Hello World".
+4.	Return 0 from main to signal successful completion.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    printf("Hello World");
+    return 0;
+}
+Output:
+Hello World
+Logic Behind It:
+This is the simplest structure every C program follows: header, then main(), then statements, then return. There is no input and no calculation here - printf simply forwards a fixed string literal straight to the console.
+Question 42
+Write a program to input two numbers and display their sum.
+Algorithm / Steps:
+1.	Declare three integer variables: num1, num2, and sum.
+2.	Prompt the user and read the first number into num1 using scanf.
+3.	Prompt the user and read the second number into num2 using scanf.
+4.	Add num1 + num2 and store the result in sum.
+5.	Display sum using printf.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    int num1, num2, sum;
+ 
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+ 
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+ 
+    sum = num1 + num2;
+ 
+    printf("Sum = %d", sum);
+    return 0;
+}
+Output:
+Enter first number: 5
+Enter second number: 7
+Sum = 12
+Logic Behind It:
+The program follows the classic Input -> Process -> Output pattern: collect two values into separate memory locations, combine them with the + operator into a third variable, then display that computed value. (The line breaks shown between the prompts and the typed numbers above come from the Enter key being echoed by the terminal - printf itself was never given a newline character.)
+Question 43
+Write a program to calculate the area of a rectangle.
+Algorithm / Steps:
+1.	Declare float variables length, breadth, and area.
+2.	Read length and breadth from the user with scanf.
+3.	Compute area = length * breadth.
+4.	Display area, formatted to two decimal places.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    float length, breadth, area;
+ 
+    printf("Enter length: ");
+    scanf("%f", &length);
+ 
+    printf("Enter breadth: ");
+    scanf("%f", &breadth);
+ 
+    area = length * breadth;
+ 
+    printf("Area = %.2f", area);
+    return 0;
+}
+Output:
+Enter length: 5
+Enter breadth: 4
+Area = 20.00
+Logic Behind It:
+This directly applies the geometric formula Area = length x breadth. float is used instead of int because real-world measurements often include decimals, and %.2f formats the printed output to two decimal places for a clean, realistic reading.
+Question 44
+What formula is used to calculate Simple Interest?
+Answer: SI = (P x R x T) / 100, where P = Principal, R = Rate of interest per year (in %), and T = Time in years.
+Question 45
+Write a program to calculate Simple Interest.
+Algorithm / Steps:
+1.	Declare float variables principal, rate, time, and SI.
+2.	Read principal, rate, and time from the user.
+3.	Apply the formula SI = (principal * rate * time) / 100.
+4.	Display SI.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    float principal, rate, time, SI;
+ 
+    printf("Enter Principal: ");
+    scanf("%f", &principal);
+ 
+    printf("Enter Rate: ");
+    scanf("%f", &rate);
+ 
+    printf("Enter Time (years): ");
+    scanf("%f", &time);
+ 
+    SI = (principal * rate * time) / 100;
+ 
+    printf("Simple Interest = %.2f", SI);
+    return 0;
+}
+Output:
+Enter Principal: 1000
+Enter Rate: 5
+Enter Time (years): 2
+Simple Interest = 100.00
+Logic Behind It:
+The code is a direct translation of the formula: each mathematical symbol (P, R, T) becomes a variable, and the formula's operations (multiply, multiply, divide by 100) become C's * and / operators in the same order, with the result stored in SI before being printed.
+Question 46
+Why is a temporary variable used while swapping two numbers?
+Answer: A temporary variable is needed to safely hold one value while it would otherwise be overwritten, so that no original value is permanently lost during the exchange.
+Question 47
+Swap the values: a=10, b=20.
+Algorithm / Steps:
+1.	Copy a's current value into a temporary variable: temp = a, so temp becomes 10.
+2.	Copy b's value into a: a = b, so a becomes 20.
+3.	Copy temp's value (a's original value) into b: b = temp, so b becomes 10.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    int a = 10, b = 20, temp;
+ 
+    temp = a;
+    a = b;
+    b = temp;
+ 
+    printf("a = %d, b = %d", a, b);
+    return 0;
+}
+Output:
+a = 20, b = 10
+Logic Behind It:
+Trace it step by step. Start: a=10, b=20, temp=undefined. After temp=a: temp=10, a=10, b=20. After a=b: temp=10, a=20, b=20. After b=temp: temp=10, a=20, b=10. The values have successfully exchanged places.
+Question 48
+What formula is used to convert Celsius into Fahrenheit?
+Answer: F = (C x 9/5) + 32, where C is the Celsius temperature and F is the resulting Fahrenheit value.
+Question 49
+What is the Fahrenheit value of 0°C?
+Answer: 32°F.
+Logic Behind It:
+Substituting C = 0 into F = (C x 9/5) + 32 gives F = (0 x 9/5) + 32 = 0 + 32 = 32. This matches the defined freezing point of water, which is the same physical temperature on both scales
+Question 50
+Why can integer division give incorrect results in the Celsius-to-Fahrenheit program?
+Answer: If 9/5 is written using two integer values, C performs integer division, which truncates the mathematically correct 1.8 down to 1, silently corrupting every converted temperature.
+C Code:
+int C = 100;
+int F = (C * 9/5) + 32;      // 9/5 truncates to 1  ->  F = 132  (WRONG, should be 212)
+ 
+float Cf = 100;
+float Ff = (Cf * 9/5) + 32;   // STILL WRONG: 9 and 5 are int literals, 9/5 still truncates to 1
+ 
+float Ff2 = (Cf * 9.0/5) + 32; // CORRECT: 9.0/5 = 1.8 (floating-point division) -> Ff2 = 212.0
+Logic Behind It:
+In C, the result type of a division depends on its operand types: int divided by int produces an int result with the fractional part discarded. To get the correct multiplier of 1.8, at least one operand of that division must be a floating-point value, such as 9.0, rather than the integer literal 9. Simply declaring the temperature variables as float is not enough on its own if the formula still divides two int literals.
