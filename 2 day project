@@ -1,0 +1,236 @@
+Question 1
+What is a conditional statement in programming?
+Answer: A conditional statement is an instruction that lets a program choose between different blocks of code to execute, based on whether a given condition evaluates to true or false.
+
+Question 2
+What does an if statement do?
+Answer: An if statement tests a condition; if the condition is true, the block of code inside the if executes, and if it is false, that block is skipped entirely.
+
+Question 3
+What is the purpose of an else block?
+Answer: An else block provides an alternative set of statements to run specifically when the if condition turns out to be false.
+
+Question 4
+When is an else block executed?
+Answer: The else block executes only when the condition in the matching if statement evaluates to false.
+
+Question 5
+What is a Boolean expression?
+Answer: A Boolean expression is any expression that evaluates to one of exactly two states: true or false (represented in C as a non-zero value for true and 0 for false).
+Question 6
+Write the syntax of a simple if statement.
+Answer: if (condition) { statement(s); }
+Question 7
+What operator is commonly used to test equality?
+Answer: ==  (the double-equals relational operator).
+Question 8
+What does the modulus (%) operator return?
+Answer: The modulus operator % returns the remainder left over after dividing one integer by another.
+Question 9
+How can you check if a number is even?
+Answer: Test whether the number leaves a remainder of 0 when divided by 2, using number % 2 == 0.
+Question 10
+How can you check if a number is odd?
+Answer: Test whether the number leaves a remainder of 1 when divided by 2, using number % 2 != 0 (or equivalently number % 2 == 1 for non-negative numbers).
+
+Section 2: Branching Structures
+
+Question 11
+What is the purpose of else-if?
+Answer: else if lets a program test a second (or third, fourth, etc.) condition only when all the previous conditions in the same chain were false, allowing multiple distinct cases to be checked in sequence.
+Question 12
+What is a nested if statement?
+Answer: A nested if statement is an if (or if-else) placed entirely inside the body of another if (or else) statement, so the inner condition is only checked when the outer condition is already true.
+Question 13
+Can an if statement exist without an else?
+Answer: Yes - else is entirely optional. An if can stand completely on its own with no else block at all.
+Question 14
+What is the output when a false condition is tested in an if statement without else?
+Answer: There is no output from that if statement at all - the block is simply skipped, and the program continues executing the code that follows it.
+Question 15
+What is the role of braces {} in C/C++ conditionals?
+Answer: Braces group multiple statements together into a single block, so that all of them are treated as one unit controlled by the if (or else, or loop).
+Question 16
+What does > mean?
+Answer: > is the 'greater than' relational operator; a > b is true only when a is strictly larger than b.
+Question 17
+What does < mean?
+Question 18
+What does >= mean?
+Answer: 'Greater than or equal to'; a >= b is true when a is larger than b, or when the two are exactly equal.
+Question 19
+What does <= mean?
+Answer: 'Less than or equal to'; a <= b is true when a is smaller than b, or when the two are exactly equal.
+Question 20
+What does != mean?
+Answer: 'Not equal to'; a != b is true whenever a and b hold different values.
+
+Section 3: The Switch Statement
+
+Question 21
+What is a switch statement?
+Answer: A switch statement compares one value against a list of possible constant cases, and runs the block of code matching whichever case equals that value - a cleaner alternative to a long chain of else-if comparisons against the same variable.
+Question 22
+What is a case label in a switch statement?
+Answer: A case label marks the entry point for one specific value the switch expression might match, written as case constant: .
+Question 23
+Why is break used in switch?
+Answer: break exits the switch statement immediately once a matching case's code has finished running, preventing execution from continuing into the next case below it.
+Question 24
+What happens if break is omitted?
+Answer: Execution falls through into the next case's code as well, running it even though its label did not match the switch expression, and this continues until a break or the end of the switch is reached.
+Question 25
+What is the default case in switch?
+Answer: default is the optional case that runs when the switch expression does not match any of the listed case labels - similar to the final else in an if-else-if chain.
+Question 26
+Can switch compare strings in C++?
+Answer: No - in standard C and standard C++, a switch statement can only compare integer-type values (int, char, or enum); it cannot directly switch on a string (char array or std::string).
+Question 27
+Which statement is better for many constant choices: if-else or switch?
+Answer: switch is generally preferred when checking one variable against many fixed constant values, since it is typically more readable and can be more efficient than an equivalent long if-else-if chain.
+Question 28
+How do you test whether a value is positive?
+Answer: Check whether the value is strictly greater than 0, using value > 0.
+Question 29
+How do you test whether a value is negative?
+Answer: Check whether the value is strictly less than 0, using value < 0.
+Question 30
+How do you test whether a value is zero?
+Answer: Check for exact equality with 0, using value == 0.
+
+Section 4: Building Conditions and Logical Operators
+
+Question 31
+Write a condition to check if age is at least 18.
+Answer: age >= 18
+Question 32
+Write a condition to check if marks are above 50.
+Answer: marks > 50
+Question 33
+What is decision making in programming?
+Answer: Decision making is the general term for a program's ability to choose between different paths of execution based on conditions, using constructs such as if, if-else, else-if, and switch.
+Question 34
+Can nested if statements have multiple levels?
+Answer: Yes - if statements can be nested as many levels deep as needed, with an if (or if-else) inside another if, which is itself inside yet another if, and so on.
+Question 35
+What is logical AND (&&)?
+Answer: && combines two conditions so that the overall expression is true only when both individual conditions are true.
+Question 36
+What is logical OR (||)?
+Answer: || combines two conditions so that the overall expression is true if at least one of the conditions is true, and false only when both are false.
+Question 37
+What is logical NOT (!)?
+Answer: ! reverses a single condition's truth value: !true becomes false, and !false becomes true.
+Question 38
+How do you check if a year is divisible by 4?
+Answer: Use year % 4 == 0 - the year is divisible by 4 exactly when this remainder is zero.
+Question 39
+What is a leap year?
+Answer: A leap year is a calendar year containing 366 days instead of the usual 365, with the extra day added as February 29th, occurring roughly every four years to keep the calendar aligned with Earth's orbit around the Sun.
+Question 40
+What is the first condition for a leap year?
+Answer: The year must be divisible by 4 - this is the first and most basic test in the standard leap-year rule, written as year % 4 == 0.
+
+Section 5: Applied Decision-Making Programs
+
+Question 41
+How do you find the largest of two numbers?
+Algorithm / Steps:
+1.	Read two numbers, a and b.
+2.	Compare them: if a > b, then a is the largest.
+3.	Otherwise (a <= b), b is the largest.
+4.	Display the largest value.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+ 
+    if (a > b) {
+        printf("Largest = %d", a);
+    } else {
+        printf("Largest = %d", b);
+    }
+    return 0;
+}
+Output:
+Enter two numbers: 7 12
+Largest = 12
+Logic Behind It:
+Only one comparison is ever needed to decide between two numbers: if a is strictly greater than b, a wins; otherwise (including the case where they're equal) b is reported, since it is not smaller than a.
+
+Question 42
+How do you find the largest of three numbers?
+Algorithm / Steps:
+1.	Read three numbers, a, b, and c.
+2.	Assume a is the largest first, and compare it against b: if b is bigger, b becomes the current largest.
+3.	Compare whichever value is currently the largest against c: if c is bigger still, c becomes the largest.
+4.	Display the final largest value.
+C Code:
+#include <stdio.h>
+ 
+int main() {
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+ 
+    if (a >= b && a >= c) {
+        printf("Largest = %d", a);
+    } else if (b >= a && b >= c) {
+        printf("Largest = %d", b);
+    } else {
+        printf("Largest = %d", c);
+    }
+    return 0;
+}
+Output:
+Enter three numbers: 4 9 6
+Largest = 9
+Logic Behind It:
+Each branch of the if-else-if directly tests one of the three numbers against both of the others using &&: a is only reported as largest if it is greater than or equal to both b AND c at once. Exactly one of the three branches will always be true, since at least one of the numbers must be greater than or equal to the other two.
+Question 43
+What is an if-else-if ladder?
+Answer: An if-else-if ladder is a chain of if, else if, else if, ... statements used to test a series of conditions one after another in order, with only the first matching branch's code actually executing.
+C Code:
+if (marks >= 90) {
+    printf("Grade A");
+} else if (marks >= 75) {
+    printf("Grade B");
+} else if (marks >= 50) {
+    printf("Grade C");
+} else {
+    printf("Grade F");
+}
+Logic Behind It:
+The conditions are evaluated top to bottom, and as soon as one is found true, that branch runs and the rest of the ladder is completely skipped - this top-down, first-match-wins behavior is exactly why it's described as a 'ladder': you fall into the first rung where your value fits, never check it against any of the remaining rungs below.
+Question 44
+What is the difference between if and switch?
+Answer: if can test any kind of Boolean expression - ranges, multiple different variables, complex logical combinations - while switch can only test a single expression for an exact match against fixed constant values (typically int, char, or enum).
+Question 45
+Can switch use ranges directly?
+Answer: No - standard C/C++ switch statements only support exact constant matches in each case label; they cannot directly express a range like case 1...10:.
+Question 46
+What is fall-through in switch?
+Answer: Fall-through is the behavior where, after a matching case's code runs, execution continues on into the next case's code as well (instead of exiting the switch), because no break statement stopped it.
+Question 47
+What data type is usually used for conditions?
+Answer: In C, conditions are int-based - any expression that evaluates to a non-zero integer is treated as true, and exactly zero is treated as false. In C99/C++ a dedicated bool type also exists for genuinely Boolean values.
+Question 48
+Why are conditional statements important?
+Answer: Conditional statements let a program respond differently to different situations - they are what give software the ability to make decisions, instead of behaving identically no matter what input or circumstances it encounters.
+Question 49
+Give one real-life example of a conditional statement.
+Answer: "If it is raining, take an umbrella; otherwise, leave it at home." This everyday decision directly mirrors an if-else structure: a condition is checked (is it raining?), and exactly one of two actions is taken depending on the result.
+Question 50
+Name four conditional structures covered.
+Answer: if, if-else, else-if (if-else-if ladder), and switch (with case and default) are the four conditional structures covered.
+
+
+
+
+
+
+
+
